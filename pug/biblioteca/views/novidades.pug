@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  h1 📖 #{titulo}
+  each livro in livros
+    div.book-item
+      h3= livro.nome
+      p Escrito por: #{livro.autor}
+  a(href="/") ← Voltar para estante
