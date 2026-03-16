@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{playlist}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <main style="max-width: 600px; margin: auto;">
+        <h1>🎸 Playlist: {{playlist}}</h1>
+        <p>As melhores bandas de todos os tempos:</p>
+        <ul>
+            {{#each tracks}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <hr>
+        <a href="/generos" style="color: #1DB954;">← Voltar para Gêneros</a>
+    </main>
+</body>
+
+</html>

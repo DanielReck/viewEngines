@@ -17,3 +17,13 @@ router.get('/novidades', function(req, res, next) {
 });
 
 module.exports = router;
+
+// Sub-rota 1: /novidades/mes
+router.get('/novidades/mes', function(req, res) {
+  res.render('mes', { mes: 'Março', total: 15 });
+});
+
+// Sub-rota 2: /novidades/autor
+router.get('/novidades/autor', function(req, res) {
+  res.render('autor', { autor: 'Stephen King', livros: ['It', 'O Iluminado'] });
+});

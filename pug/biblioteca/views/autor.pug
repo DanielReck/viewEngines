@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  div.container
+    h1 ✍️ Perfil do Autor: #{autor}
+    p Conheça as obras mais famosas:
+    ul
+      each livro in livros
+        li= livro
+    hr
+    a(href="/novidades") ← Voltar para Novidades

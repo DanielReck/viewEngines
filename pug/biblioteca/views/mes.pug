@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  div.container
+    h1 📅 Lançamentos de #{mes}
+    p Este mês tivemos um total de 
+      strong #{total} novos livros 
+      | em nossa estante.
+    hr
+    a(href="/novidades") ← Voltar para Novidades

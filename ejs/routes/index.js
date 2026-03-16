@@ -14,3 +14,14 @@ router.get('/perfil', function(req, res, next) {
 });
 
 module.exports = router;
+
+// Rota pai: /perfil (que você já criou)
+// Sub-rota 1: /perfil/detalhes
+router.get('/perfil/detalhes', function(req, res) {
+  res.render('detalhes', { info: 'Membro desde 2024', status: 'Ativo' });
+});
+
+// Sub-rota 2: /perfil/configuracoes
+router.get('/perfil/configuracoes', function(req, res) {
+  res.render('configuracoes', { tema: 'Escuro' });
+});

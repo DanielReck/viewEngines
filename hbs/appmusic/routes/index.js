@@ -14,3 +14,19 @@ router.get('/generos', function(req, res, next) {
 });
 
 module.exports = router;
+
+// Sub-rota 1: /generos/rock
+router.get('/generos/rock', function(req, res) {
+  res.render('rock', { 
+    playlist: 'Clássicos do Rock', 
+    tracks: ['AC/DC', 'Nirvana', 'Deep Purple'] 
+  });
+});
+
+// Sub-rota 2: /generos/jazz
+router.get('/generos/jazz', function(req, res) {
+  res.render('jazz', { 
+    playlist: 'Jazz Noturno', 
+    tracks: ['Miles Davis', 'John Coltrane'] 
+  });
+});
